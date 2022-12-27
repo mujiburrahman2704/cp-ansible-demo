@@ -139,10 +139,10 @@ olcAccess: {2}to * by dn="cn=admin,dc=alfi,dc=com" write by * read
 
 ```bash
 [root@kerberos ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f ldaprootpasswd.ldif
-[root@kerberos ~]# ldapmodify -Y EXTERNAL -H ldapi:/// -f ldapdomain.ldif
 [root@kerberos ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
 [root@kerberos ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif
 [root@kerberos ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
+[root@kerberos ~]# ldapmodify -Y EXTERNAL -H ldapi:/// -f ldapdomain.ldif
 [root@kerberos ~]# ldapadd -x -D cn=admin,dc=alldataint,dc=com -W -f baseldapdomain.ldif
 ```
 
